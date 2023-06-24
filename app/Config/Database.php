@@ -25,15 +25,14 @@ class Database extends Config
      * The default database connection.
      */
     public array $default = [
-        $hostname = 'localhost',
-        $username = 'root',
-        $password = '',
-        $database = 'cadastros',
-        $DBDriver = 'MySQLi',
-        $DBDebug  = true,
-        $charset  = 'utf8',
-        $DBCollat = 'utf8_general_ci'
-        
+        'hostname' => 'localhost',
+        'username' => 'root',
+        'password' => '',
+        'database' => 'cadastros',
+        'DBDriver' => 'MySQLi',
+        'DBDebug ' => true,
+        'charset ' => 'utf8',
+        'DBCollat' => 'utf8_general_ci'
         //'DSN'      => '',
         //'hostname' => 'localhost',
         //'username' => 'root',
