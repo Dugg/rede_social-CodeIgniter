@@ -12,8 +12,12 @@ class SocialMedia extends BaseController{
     }
 
     public function index(){
-        
-        return view('home');
+        $dados = $this->social_media_DB->readAll();
+        return view('home',compact('dados'));
+    }
+
+    public function load($view){
+        return view($view);
     }
 }
 ?>

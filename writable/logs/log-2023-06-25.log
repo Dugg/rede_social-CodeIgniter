@@ -1,0 +1,503 @@
+ERROR - 2023-06-25 22:49:43 --> mysqli_sql_exception: Table 'cadastros.cadastro' doesn't exist in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(39): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#10 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-25 22:49:43 --> Table 'cadastros.cadastro' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `cadastro`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cadastro`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cadastro`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cadastro`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SocialMediaDB.php(39): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-25 22:51:38 --> mysqli_sql_exception: Table 'cadastros.cadastro' doesn't exist in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(39): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#10 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-25 22:51:38 --> Table 'cadastros.cadastro' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `cadastro`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cadastro`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cadastro`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cadastro`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SocialMediaDB.php(39): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-25 22:51:52 --> mysqli_sql_exception: Table 'cadastros.cadastro' doesn't exist in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(39): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#10 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-25 22:51:52 --> Table 'cadastros.cadastro' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `cadastro`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cadastro`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cadastro`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cadastro`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SocialMediaDB.php(39): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-25 22:51:54 --> mysqli_sql_exception: Table 'cadastros.cadastro' doesn't exist in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(39): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#10 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-25 22:51:54 --> Table 'cadastros.cadastro' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `cadastro`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cadastro`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cadastro`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cadastro`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SocialMediaDB.php(39): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-25 22:55:12 --> mysqli_sql_exception: Table 'cadastros.cadastro' doesn't exist in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(39): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#10 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-25 22:55:12 --> Table 'cadastros.cadastro' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `cadastro`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cadastro`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cadastro`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cadastro`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SocialMediaDB.php(39): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-25 22:55:14 --> mysqli_sql_exception: Table 'cadastros.cadastro' doesn't exist in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(39): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#10 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-25 22:55:14 --> Table 'cadastros.cadastro' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `cadastro`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cadastro`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cadastro`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cadastro`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SocialMediaDB.php(39): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-25 22:56:08 --> mysqli_sql_exception: Table 'cadastros.cadastro' doesn't exist in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(39): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#10 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-25 22:56:08 --> Table 'cadastros.cadastro' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `cadastro`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cadastro`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cadastro`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cadastro`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SocialMediaDB.php(39): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-25 22:56:10 --> mysqli_sql_exception: Table 'cadastros.cadastro' doesn't exist in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(39): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#10 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-25 22:56:10 --> Table 'cadastros.cadastro' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `cadastro`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cadastro`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cadastro`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cadastro`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SocialMediaDB.php(39): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-25 22:58:18 --> mysqli_sql_exception: Table 'cadastros.cadastro' doesn't exist in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(39): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#10 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-25 22:58:18 --> Table 'cadastros.cadastro' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `cadastro`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cadastro`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cadastro`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cadastro`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SocialMediaDB.php(39): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-25 22:58:37 --> compact(): Undefined variable $dados
+in APPPATH\Controllers\SocialMedia.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'compact(): Undefined variable $dados', 'C:\\xampp\\htdocs\\atv_Avaliativa_Final\\CodeIgniter\\app\\Controllers\\SocialMedia.php', 16)
+ 2 APPPATH\Controllers\SocialMedia.php(16): compact('dados')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-25 22:59:52 --> mysqli_sql_exception: Table 'cadastros.cadastro' doesn't exist in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(39): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#10 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-25 22:59:52 --> Table 'cadastros.cadastro' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `cadastro`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cadastro`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cadastro`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cadastro`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SocialMediaDB.php(39): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-25 23:00:15 --> mysqli_sql_exception: Table 'cadastros.cadastro' doesn't exist in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(39): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(16): App\Models\SocialMediaDB->readAll()
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#10 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-25 23:00:15 --> Table 'cadastros.cadastro' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `cadastro`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cadastro`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cadastro`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cadastro`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SocialMediaDB.php(39): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SocialMedia.php(16): App\Models\SocialMediaDB->readAll()
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-25 23:00:17 --> mysqli_sql_exception: Table 'cadastros.cadastro' doesn't exist in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(39): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(16): App\Models\SocialMediaDB->readAll()
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#10 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-25 23:00:17 --> Table 'cadastros.cadastro' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `cadastro`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cadastro`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cadastro`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cadastro`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SocialMediaDB.php(39): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SocialMedia.php(16): App\Models\SocialMediaDB->readAll()
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-25 23:01:56 --> mysqli_sql_exception: Table 'cadastros.cadastro' doesn't exist in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#10 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-25 23:01:56 --> Table 'cadastros.cadastro' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `cadastro`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cadastro`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cadastro`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cadastro`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SocialMediaDB.php(42): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-25 23:04:19 --> mysqli_sql_exception: Table 'cadastros.cadastro' doesn't exist in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#10 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-25 23:04:19 --> Table 'cadastros.cadastro' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `cadastro`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cadastro`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cadastro`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cadastro`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SocialMediaDB.php(42): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-25 23:04:59 --> mysqli_sql_exception: Table 'cadastros.cadastro' doesn't exist in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(43): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#10 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-25 23:04:59 --> Table 'cadastros.cadastro' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `cadastro`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `cadastro`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `cadastro`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `cadastro`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SocialMediaDB.php(43): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SocialMedia.php(15): App\Models\SocialMediaDB->readAll()
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

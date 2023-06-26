@@ -11,7 +11,7 @@ class SocialMediaDB extends Model
     protected $DB_SENHA;
     protected $DB_BANCO;
 
-    protected $table = ''; // Insira o nome da tabela do seu banco de dados
+    protected $table = 'usuarios'; // Insira o nome da tabela do seu banco de dados
 
     public function __construct()
     {
@@ -26,16 +26,18 @@ class SocialMediaDB extends Model
     private function conexao()
     {
         $this->db = db_connect(); // Obtém a conexão com o banco de dados
-
+    
         if ($this->db->connect_errno) {
             echo ("Falha na conexão com o banco de dados: " . $this->db->connect_error);
         }
     }
+    
 
     public function readAll()
     {
         // Implemente o código para buscar os registros do banco de dados
         // Exemplo:
-        return $this->findAll(); // Retorna todos os registros da tabela
+        $dados = $this->findAll();
+        return $dados; // Retorna todos os registros da tabela
     }
 }
