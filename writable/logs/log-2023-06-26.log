@@ -234,3 +234,45 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
  5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
  6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 22:06:28 --> Invalid file: "cadastrar.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('cadastrar.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('cadastrar', [], true)
+ 3 APPPATH\Controllers\SocialMedia.php(20): view('cadastrar')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->load('cadastrar')
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 22:21:34 --> Undefined array key "comment"
+in APPPATH\Views\home.php on line 225.
+ 1 APPPATH\Views\home.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "comment"', 'C:\\xampp\\htdocs\\atv_Avaliativa_Final\\CodeIgniter\\app\\Views\\home.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\atv_Avaliativa_Final\\CodeIgniter\\app\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\SocialMedia.php(16): view('home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 22:59:14 --> Undefined variable $value
+in APPPATH\Views\home.php on line 254.
+ 1 APPPATH\Views\home.php(254): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', 'C:\\xampp\\htdocs\\atv_Avaliativa_Final\\CodeIgniter\\app\\Views\\home.php', 254)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\atv_Avaliativa_Final\\CodeIgniter\\app\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\SocialMedia.php(16): view('home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-26 23:00:00 --> Undefined variable $value
+in APPPATH\Views\home.php on line 254.
+ 1 APPPATH\Views\home.php(254): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', 'C:\\xampp\\htdocs\\atv_Avaliativa_Final\\CodeIgniter\\app\\Views\\home.php', 254)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\atv_Avaliativa_Final\\CodeIgniter\\app\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\SocialMedia.php(16): view('home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

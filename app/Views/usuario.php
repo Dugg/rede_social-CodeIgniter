@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="files/style.css">
     <script src="files/index.js"></script>
-    <title>LOGIN</title>
+    <title>Usuarios</title>
 </head>
 <body class="utiliti">
     <div class="card">
