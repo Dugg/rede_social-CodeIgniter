@@ -19,5 +19,24 @@ class SocialMedia extends BaseController{
     public function load($view){
         return view($view);
     }
+
+    public function login(){
+        return view('login');
+    }
+
+    public function insert_dados(){
+        $dados = [
+            'login' => $_POST['login'],
+            'senha' => $_POST['senha'],
+            'email' => $_POST['email']
+        ];
+
+        $resultado = $this->social_media_DB->insert_data($dados);
+
+        if($resultado > 0){
+            echo 'Dados inseridos com sucesso!';
+        } else {
+            echo 'Erro ao inserir os dados.';
+        }
+    }
 }
-?>

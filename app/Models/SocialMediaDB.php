@@ -40,4 +40,9 @@ class SocialMediaDB extends Model
         $dados = $this->findAll();
         return $dados; // Retorna todos os registros da tabela
     }
+
+    public function insert_data($dados){
+        $this->insert($dados);
+        return $this->db->affectedRows();
+    }
 }

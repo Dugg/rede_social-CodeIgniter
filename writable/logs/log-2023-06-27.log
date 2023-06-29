@@ -1,0 +1,11 @@
+CRITICAL - 2023-06-27 01:04:13 --> Undefined variable $values
+in APPPATH\Views\home.php on line 291.
+ 1 APPPATH\Views\home.php(291): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $values', 'C:\\xampp\\htdocs\\atv_Avaliativa_Final\\CodeIgniter\\app\\Views\\home.php', 291)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\atv_Avaliativa_Final\\CodeIgniter\\app\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\SocialMedia.php(16): view('home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
