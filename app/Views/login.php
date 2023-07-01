@@ -60,10 +60,23 @@
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+  margin-bottom: 5px;
 }
 
 .login_button:hover {
   background-color: #0c87b8;
+}
+
+.cadastrar_button {
+  background-color: #1da1f2;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 5px;
 }
     </style>
 </head>
@@ -77,6 +90,9 @@
                 <input class="login_input" type="text" placeholder="Username" name="login" >
                 <input class="login_input" type="password" placeholder="Password" name="senha" required>
                 <button class="login_button" type="submit">Login</button>
+            </form>
+            <form class="login_form" action="ValidaLogin" method="get">
+                <button class="cadastrar_button" type="submit">Cadastrar</button>
             </form>
         </div>
     </div>
