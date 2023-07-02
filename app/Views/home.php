@@ -387,9 +387,16 @@
         .tweet-dialog .confirm {
             background-color: #dc3545;
         }
+
+        .liked .fa-heart {
+            color: red;
+        }
     </style>
 
     <title>Tela no Estilo do Twitter</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/bd9b7e619e.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -415,7 +422,8 @@
         <div class="middle-column">
             <div class="tweets">
                 <h2>Tweets</h2>
-                <?php foreach ($dados as $value) { ?>
+                <?php foreach ($dados as $value) {
+                ?>
                     <div class="tweet">
                         <div class="user">
                             <img src="https://via.placeholder.com/48" alt="User">
@@ -423,10 +431,16 @@
                         </div>
                         <div class="message">
                             <div class="user-name"><?php echo $value['login']; ?></div>
-                            <p><?php echo $value['senha'] ?></p>
+                            <p><?php echo $value['mensagem'] ?></p>
                             <div class="actions">
-                                <button class="btn-like"><img src="files/heart-icon.png" alt="Like"></button>
-                                <button class="btn-retweet"><img src="files/retweet-icon.png" alt="Retweet"></button>
+                                <button class="btn-like" data-id-like='0' data-liked="false" data-post-id="<?php echo $value['post_id'] ?>" onclick="like(this)">
+                                    <i class="fas fa-heart"></i>
+                                    <span class="likes-count"><?php echo $value['quantidade_likes'] ?></span>
+                                </button>
+                                <button class="btn-retweet">
+                                    <i class="fas fa-comment"></i>
+                                    <span class="comments-count"><?php echo $value['quantidade_comentarios'] ?></span>
+                                </button>
                                 <button onclick="openPopup(event)" class="btn-options">...</button>
                                 <div class="popup">
                                     <ul>
@@ -444,9 +458,7 @@
         <div class="right-column">
             <div class="news">
                 <h2>Notícias</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur vitae diam id consequat. Donec ut
-                    faucibus orci. Aliquam dignissim, eros id dignissim placerat, dui metus tempor lectus, et sollicitudin urna
-                    tortor nec libero.</p>
+                <p>PICAS VOADORAS CAEM DO CÉU</p>
             </div>
         </div>
     </div>
@@ -455,10 +467,10 @@
 
 <script>
     // Recupera o valor do login do Local Storage
-    var login = localStorage.getItem('login');
+    var id_user = localStorage.getItem('id_user');
 
     // Exibe o valor no console
-    console.log(login);
+    console.log(id_user);
 
     function openPopup(event) {
         var target = event.target;
@@ -479,20 +491,21 @@
     });
 
     $(document).ready(function() {
-        $('#envio_Post').submit(function(event) {
+        $('.confirm').click(function(event) {
             event.preventDefault(); // Evita o envio padrão do formulário
-            var mensagem = document.getElementById("tweet-input");
+            var mensagem = document.getElementById("tweet-input").value;
 
             // Faça a requisição AJAX
             $.ajax({
-                url: $(this).attr('action'),
-                type: $(this).attr('method'),
+                url: 'SocialMedia/post',
+                type: 'POST',
                 data: {
-                    'usuario': $usuario = $_SESSION['usuario'],
-                    'mensagem': $mensagem
+                    'id_user': id_user,
+                    'mensagem': mensagem
                 },
                 success: function(response) {
                     console.log('Requisição bem-sucedida:', response);
+                    location.reload();
                     // Faça algo com a resposta recebida
                 },
                 error: function(xhr, status, error) {
@@ -502,6 +515,81 @@
             });
         });
     });
+
+    function like(button) {
+        var id_user = localStorage.getItem('id_user');
+        let post_id = button.getAttribute('data-post-id');
+        let like_id = button.getAttribute('data-id-like');
+        console.log(post_id);
+
+        if (button.getAttribute('data-liked') !== 'true') {
+            $.ajax({
+                url: 'SocialMedia/like',
+                type: 'POST',
+                data: {
+                    'id_user': id_user,
+                    'post_id': post_id
+                },
+                success: function(response) {
+                    console.log('Requisição bem-sucedida:', response);
+                    location.reload();
+                    // Faça algo com a resposta recebida
+                },
+                error: function(xhr, status, error) {
+                    console.log('Erro na requisição:', error);
+                    // Lide com o erro
+                }
+            });
+        }else{
+            $.ajax({
+                url: 'SocialMedia/deslike',
+                type: 'POST',
+                data: {
+                    'like_id': like_id
+                },
+                success: function(response) {
+                    console.log('Requisição bem-sucedida:', response);
+                    // Faça algo com a resposta recebida
+                    location.reload();
+                    button.remove('liked');
+                },
+                error: function(xhr, status, error) {
+                    console.log('Erro na requisição:', error);
+                    // Lide com o erro
+                }
+            });
+        }
+    }
+
+    window.addEventListener('load', () => {
+        var id_user = localStorage.getItem('id_user');
+        $.ajax({
+            url: 'SocialMedia/get_likes',
+            type: 'POST',
+            data: {
+                'id_user': id_user,
+            },
+            success: function(response) {
+                console.log('Requisição bem-sucedida:', response);
+                var likes = response.likes;
+                likes.forEach(function(like) {
+                    var postID = like.post_id;
+                    var likeID = like.id_like
+                    var likeButton = document.querySelector(`button[data-post-id="${postID}"]`);
+                    if (likeButton) {
+                        likeButton.classList.add('liked');
+                        likeButton.setAttribute('data-liked', 'true');
+                        likeButton.setAttribute('data-id-like', likeID);
+                    }
+                });
+            },
+            error: function(xhr, status, error) {
+                console.log('Erro na requisição:', error);
+                // Lide com o erro
+            }
+        });
+    });
 </script>
+
 
 </html>

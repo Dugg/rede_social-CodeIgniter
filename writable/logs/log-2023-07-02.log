@@ -1,0 +1,256 @@
+CRITICAL - 2023-07-02 03:47:01 --> Undefined array key "login"
+in APPPATH\Controllers\ValidaLogin.php on line 20.
+ 1 APPPATH\Controllers\ValidaLogin.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "login"', 'C:\\xampp\\htdocs\\atv_Avaliativa_Final\\CodeIgniter\\app\\Controllers\\ValidaLogin.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ValidaLogin->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidaLogin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-02 04:00:08 --> Undefined array key "id_post"
+in APPPATH\Views\home.php on line 432.
+ 1 APPPATH\Views\home.php(432): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_post"', 'C:\\xampp\\htdocs\\atv_Avaliativa_Final\\CodeIgniter\\app\\Views\\home.php', 432)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\atv_Avaliativa_Final\\CodeIgniter\\app\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\ValidaLogin.php(36): view('home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ValidaLogin->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidaLogin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-02 04:00:17 --> Undefined array key "id_post"
+in APPPATH\Views\home.php on line 432.
+ 1 APPPATH\Views\home.php(432): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_post"', 'C:\\xampp\\htdocs\\atv_Avaliativa_Final\\CodeIgniter\\app\\Views\\home.php', 432)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\atv_Avaliativa_Final\\CodeIgniter\\app\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\ValidaLogin.php(36): view('home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ValidaLogin->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidaLogin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-02 04:14:41 --> mysqli_sql_exception: Unknown column 'post_id' in 'field list' in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `po...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `po...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `po...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `po...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(59): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(40): App\Models\SocialMediaDB->insert_like(Array)
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->like()
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-02 04:14:41 --> Unknown column 'post_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `post` (`id_autor`, `post_id`) VALUES (\'2\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `post` (`id_autor`, `post_id`) VALUES (\'2\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `post` (`id_autor`, `post_id`) VALUES (\'2\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `post` (`id_autor`, `post_id`) VALUES (:id_autor:, :post_id:)', [...], false)
+ 5 APPPATH\Models\SocialMediaDB.php(59): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\SocialMedia.php(40): App\Models\SocialMediaDB->insert_like([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->like()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-02 04:15:45 --> mysqli_sql_exception: Table 'cadastros.like' doesn't exist in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `li...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `li...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `li...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `li...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(59): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(40): App\Models\SocialMediaDB->insert_like(Array)
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->like()
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-02 04:15:45 --> Table 'cadastros.like' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `like` (`id_autor`, `post_id`) VALUES (\'2\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `like` (`id_autor`, `post_id`) VALUES (\'2\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `like` (`id_autor`, `post_id`) VALUES (\'2\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `like` (`id_autor`, `post_id`) VALUES (:id_autor:, :post_id:)', [...], false)
+ 5 APPPATH\Models\SocialMediaDB.php(59): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\SocialMedia.php(40): App\Models\SocialMediaDB->insert_like([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->like()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-02 04:15:54 --> mysqli_sql_exception: Table 'cadastros.like' doesn't exist in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `li...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `li...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `li...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `li...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(59): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(40): App\Models\SocialMediaDB->insert_like(Array)
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->like()
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-02 04:15:54 --> Table 'cadastros.like' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `like` (`id_autor`, `post_id`) VALUES (\'2\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `like` (`id_autor`, `post_id`) VALUES (\'2\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `like` (`id_autor`, `post_id`) VALUES (\'2\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `like` (`id_autor`, `post_id`) VALUES (:id_autor:, :post_id:)', [...], false)
+ 5 APPPATH\Models\SocialMediaDB.php(59): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\SocialMedia.php(40): App\Models\SocialMediaDB->insert_like([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->like()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-02 04:17:16 --> mysqli_sql_exception: Table 'cadastros.like' doesn't exist in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `li...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `li...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `li...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `li...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(61): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(40): App\Models\SocialMediaDB->insert_like(Array)
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->like()
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-02 04:17:16 --> Table 'cadastros.like' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `like` (`id_autor`, `post_id`) VALUES (\'2\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `like` (`id_autor`, `post_id`) VALUES (\'2\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `like` (`id_autor`, `post_id`) VALUES (\'2\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `like` (`id_autor`, `post_id`) VALUES (:id_autor:, :post_id:)', [...], false)
+ 5 APPPATH\Models\SocialMediaDB.php(61): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\SocialMedia.php(40): App\Models\SocialMediaDB->insert_like([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->like()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-02 04:17:26 --> mysqli_sql_exception: Table 'cadastros.like' doesn't exist in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `li...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `li...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `li...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `li...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(61): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(40): App\Models\SocialMediaDB->insert_like(Array)
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->like()
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-02 04:17:26 --> Table 'cadastros.like' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `like` (`id_autor`, `post_id`) VALUES (\'2\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `like` (`id_autor`, `post_id`) VALUES (\'2\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `like` (`id_autor`, `post_id`) VALUES (\'2\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `like` (`id_autor`, `post_id`) VALUES (:id_autor:, :post_id:)', [...], false)
+ 5 APPPATH\Models\SocialMediaDB.php(61): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\SocialMedia.php(40): App\Models\SocialMediaDB->insert_like([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->like()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-02 04:49:43 --> Too few arguments to function App\Controllers\SocialMedia::get_likes(), 0 passed in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\SocialMedia.php on line 49.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->get_likes()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-02 04:50:34 --> Too few arguments to function App\Controllers\SocialMedia::get_likes(), 0 passed in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\SocialMedia.php on line 49.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->get_likes()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-02 04:52:42 --> Too few arguments to function App\Controllers\SocialMedia::get_likes(), 0 passed in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\SocialMedia.php on line 49.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->get_likes()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-02 04:56:25 --> Too few arguments to function App\Controllers\SocialMedia::get_likes(), 0 passed in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\SocialMedia.php on line 49.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->get_likes()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-02 04:56:57 --> Too few arguments to function App\Controllers\SocialMedia::get_likes(), 0 passed in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\SocialMedia.php on line 55.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->get_likes()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-02 05:00:17 --> Too few arguments to function App\Controllers\SocialMedia::get_likes(), 0 passed in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\SocialMedia.php on line 55.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->get_likes()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-02 05:02:59 --> Too few arguments to function App\Controllers\SocialMedia::get_likes(), 0 passed in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\SocialMedia.php on line 55.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->get_likes()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-02 05:06:01 --> Too few arguments to function App\Controllers\SocialMedia::get_likes(), 0 passed in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\SocialMedia.php on line 55.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->get_likes()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-02 05:07:22 --> Too few arguments to function App\Controllers\SocialMedia::get_likes(), 0 passed in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\SocialMedia.php on line 55.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->get_likes()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-02 05:13:07 --> Undefined array key "id_user"
+in APPPATH\Models\SocialMediaDB.php on line 73.
+ 1 APPPATH\Models\SocialMediaDB.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_user"', 'C:\\xampp\\htdocs\\atv_Avaliativa_Final\\CodeIgniter\\app\\Models\\SocialMediaDB.php', 73)
+ 2 APPPATH\Controllers\SocialMedia.php(60): App\Models\SocialMediaDB->get_likes([...])
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->get_likes()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-02 05:14:35 --> Undefined array key "id_user"
+in APPPATH\Models\SocialMediaDB.php on line 73.
+ 1 APPPATH\Models\SocialMediaDB.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_user"', 'C:\\xampp\\htdocs\\atv_Avaliativa_Final\\CodeIgniter\\app\\Models\\SocialMediaDB.php', 73)
+ 2 APPPATH\Controllers\SocialMedia.php(61): App\Models\SocialMediaDB->get_likes([...])
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->get_likes()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-02 05:57:56 --> Undefined array key "post_id"
+in APPPATH\Controllers\SocialMedia.php on line 59.
+ 1 APPPATH\Controllers\SocialMedia.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "post_id"', 'C:\\xampp\\htdocs\\atv_Avaliativa_Final\\CodeIgniter\\app\\Controllers\\SocialMedia.php', 59)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->deslike()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-02 05:59:02 --> mysqli_sql_exception: Unknown column 'like_id' in 'field list' in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `li...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `li...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `li...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `li...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(59): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(62): App\Models\SocialMediaDB->insert_like(Array)
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->deslike()
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-02 05:59:02 --> Unknown column 'like_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `likes` (`id_autor`, `like_id`) VALUES (\'2\', \'18\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `likes` (`id_autor`, `like_id`) VALUES (\'2\', \'18\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `likes` (`id_autor`, `like_id`) VALUES (\'2\', \'18\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `likes` (`id_autor`, `like_id`) VALUES (:id_autor:, :like_id:)', [...], false)
+ 5 APPPATH\Models\SocialMediaDB.php(59): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\SocialMedia.php(62): App\Models\SocialMediaDB->insert_like([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->deslike()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
