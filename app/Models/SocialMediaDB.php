@@ -85,4 +85,36 @@ class SocialMediaDB extends Model
         $result = $query->getResultArray();
         return $result;
     }
+
+    public function comentarios($dados)
+    {
+        $query = $this->db->table('post as p')
+            ->select('u.login, p.mensagem')
+            ->join('usuarios u', 'p.id_autor = u.id', 'left')
+            ->where('p.id', $dados)
+            ->get();
+
+        $result = $query->getResultArray();
+
+        return $result;
+    }
+
+    public function get_ComentariosPost($post_id)
+    {
+        $query = $this->db->table('comentarios c')
+            ->select('u.login, c.mensagem')
+            ->join('usuarios u', 'u.id = c.id_autor', 'left')
+            ->where('c.post_id', $post_id)
+            ->get();
+
+        $result = $query->getResultArray();
+
+        return $result;
+    }
+
+    public function insert_comentarios_post($dados)
+    {
+        $this->db->table('comentarios')->insert($dados);
+        return $this->db->affectedRows();
+    }
 }

@@ -1,0 +1,844 @@
+CRITICAL - 2023-07-05 22:45:38 --> Cannot access offset of type string on string
+in APPPATH\Models\SocialMediaDB.php on line 91.
+ 1 APPPATH\Controllers\SocialMedia.php(25): App\Models\SocialMediaDB->comentarios('1')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-05 22:45:48 --> Cannot access offset of type string on string
+in APPPATH\Models\SocialMediaDB.php on line 91.
+ 1 APPPATH\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-05 22:45:49 --> Cannot access offset of type string on string
+in APPPATH\Models\SocialMediaDB.php on line 91.
+ 1 APPPATH\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-05 22:45:58 --> Cannot access offset of type string on string
+in APPPATH\Models\SocialMediaDB.php on line 91.
+ 1 APPPATH\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-05 22:47:17 --> mysqli_sql_exception: Unknown column 'p.mensagem' in 'field list' in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`log...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`log...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`log...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`log...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(96): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-05 22:47:17 --> Unknown column 'p.mensagem' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = :p.id:', [...], false)
+ 5 APPPATH\Models\SocialMediaDB.php(96): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-05 22:47:23 --> mysqli_sql_exception: Unknown column 'p.mensagem' in 'field list' in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`log...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`log...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`log...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`log...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-05 22:47:23 --> Unknown column 'p.mensagem' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = :p.id:', [...], false)
+ 5 APPPATH\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-05 22:48:32 --> mysqli_sql_exception: Unknown column 'p.mensagem' in 'field list' in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`log...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`log...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`log...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`log...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-05 22:48:32 --> Unknown column 'p.mensagem' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = :p.id:', [...], false)
+ 5 APPPATH\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-05 22:48:34 --> mysqli_sql_exception: Unknown column 'p.mensagem' in 'field list' in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`log...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`log...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`log...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`log...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-05 22:48:34 --> Unknown column 'p.mensagem' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = :p.id:', [...], false)
+ 5 APPPATH\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-05 22:51:59 --> mysqli_sql_exception: Unknown column 'p.mensagem' in 'field list' in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`log...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`log...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`log...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`log...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-05 22:51:59 --> Unknown column 'p.mensagem' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = :p.id:', [...], false)
+ 5 APPPATH\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-05 22:52:00 --> mysqli_sql_exception: Unknown column 'p.mensagem' in 'field list' in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`log...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`log...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`log...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`log...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-05 22:52:00 --> Unknown column 'p.mensagem' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = :p.id:', [...], false)
+ 5 APPPATH\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-05 22:52:20 --> mysqli_sql_exception: Unknown column 'p.mensagem' in 'field list' in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`log...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`log...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`log...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`log...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-05 22:52:20 --> Unknown column 'p.mensagem' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = :p.id:', [...], false)
+ 5 APPPATH\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-05 22:52:21 --> mysqli_sql_exception: Unknown column 'p.mensagem' in 'field list' in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`log...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`log...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`log...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`log...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-05 22:52:21 --> Unknown column 'p.mensagem' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = :p.id:', [...], false)
+ 5 APPPATH\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-05 22:54:17 --> mysqli_sql_exception: Unknown column 'p.mensagem' in 'field list' in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`log...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`log...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`log...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`log...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-05 22:54:17 --> Unknown column 'p.mensagem' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = :p.id:', [...], false)
+ 5 APPPATH\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-05 22:54:18 --> mysqli_sql_exception: Unknown column 'p.mensagem' in 'field list' in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`log...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`log...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`log...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`log...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-05 22:54:18 --> Unknown column 'p.mensagem' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = :p.id:', [...], false)
+ 5 APPPATH\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-05 22:54:21 --> mysqli_sql_exception: Unknown column 'p.mensagem' in 'field list' in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`log...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`log...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`log...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`log...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-05 22:54:21 --> Unknown column 'p.mensagem' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = :p.id:', [...], false)
+ 5 APPPATH\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-05 22:54:43 --> mysqli_sql_exception: Unknown column 'p.mensagem' in 'field list' in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`log...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`log...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`log...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`log...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-05 22:54:43 --> Unknown column 'p.mensagem' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = :p.id:', [...], false)
+ 5 APPPATH\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-05 22:54:43 --> mysqli_sql_exception: Unknown column 'p.mensagem' in 'field list' in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`log...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`log...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`log...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`log...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-05 22:54:43 --> Unknown column 'p.mensagem' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = :p.id:', [...], false)
+ 5 APPPATH\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-05 22:55:10 --> mysqli_sql_exception: Unknown column 'p.mensagem' in 'field list' in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`log...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`log...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`log...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`log...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-05 22:55:10 --> Unknown column 'p.mensagem' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = :p.id:', [...], false)
+ 5 APPPATH\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-05 22:55:30 --> mysqli_sql_exception: Unknown column 'p.mensagem' in 'field list' in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`log...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`log...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`log...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`log...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(96): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-05 22:55:30 --> Unknown column 'p.mensagem' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = :p.id:', [...], false)
+ 5 APPPATH\Models\SocialMediaDB.php(96): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-05 23:17:28 --> mysqli_sql_exception: Unknown column 'p.mensagem' in 'field list' in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`log...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`log...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`log...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`log...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-05 23:17:28 --> Unknown column 'p.mensagem' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = :p.id:', [...], false)
+ 5 APPPATH\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-05 23:24:37 --> mysqli_sql_exception: Unknown column 'p.mensagem' in 'field list' in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`log...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`log...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`log...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`log...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-05 23:24:37 --> Unknown column 'p.mensagem' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = :p.id:', [...], false)
+ 5 APPPATH\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-05 23:25:28 --> mysqli_sql_exception: Unknown column 'p.mensagem' in 'field list' in C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`log...', 0)
+#1 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`log...')
+#2 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`log...')
+#3 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`log...', Array, false)
+#4 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\app\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+#6 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+#7 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+#8 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\atv_Avaliativa_Final\CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-07-05 23:25:28 --> Unknown column 'p.mensagem' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`login`, `p`.`mensagem`
+FROM `post`
+LEFT JOIN `usuarios` `u` ON `p`.`id_autor` = `u`.`id`
+WHERE `p`.`id` = :p.id:', [...], false)
+ 5 APPPATH\Models\SocialMediaDB.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SocialMedia.php(24): App\Models\SocialMediaDB->comentarios('1')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-05 23:30:01 --> Undefined array key "login"
+in APPPATH\Views\comentarios.php on line 217.
+ 1 APPPATH\Views\comentarios.php(217): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "login"', 'C:\\xampp\\htdocs\\atv_Avaliativa_Final\\CodeIgniter\\app\\Views\\comentarios.php', 217)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\atv_Avaliativa_Final\\CodeIgniter\\app\\Views\\comentarios.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('comentarios', [], true)
+ 5 APPPATH\Controllers\SocialMedia.php(27): view('comentarios', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-05 23:34:30 --> Unclosed '{' on line 217
+in APPPATH\Views\comentarios.php on line 238.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('comentarios', [], true)
+ 3 APPPATH\Controllers\SocialMedia.php(27): view('comentarios', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-05 23:34:31 --> Unclosed '{' on line 217
+in APPPATH\Views\comentarios.php on line 238.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('comentarios', [], true)
+ 3 APPPATH\Controllers\SocialMedia.php(27): view('comentarios', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-05 23:34:32 --> Unclosed '{' on line 217
+in APPPATH\Views\comentarios.php on line 238.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('comentarios', [], true)
+ 3 APPPATH\Controllers\SocialMedia.php(27): view('comentarios', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-05 23:34:32 --> Unclosed '{' on line 217
+in APPPATH\Views\comentarios.php on line 238.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('comentarios', [], true)
+ 3 APPPATH\Controllers\SocialMedia.php(27): view('comentarios', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-05 23:34:32 --> Unclosed '{' on line 217
+in APPPATH\Views\comentarios.php on line 238.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('comentarios', [], true)
+ 3 APPPATH\Controllers\SocialMedia.php(27): view('comentarios', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-05 23:34:33 --> Unclosed '{' on line 217
+in APPPATH\Views\comentarios.php on line 238.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('comentarios', [], true)
+ 3 APPPATH\Controllers\SocialMedia.php(27): view('comentarios', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-05 23:34:33 --> Unclosed '{' on line 217
+in APPPATH\Views\comentarios.php on line 238.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('comentarios', [], true)
+ 3 APPPATH\Controllers\SocialMedia.php(27): view('comentarios', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-05 23:34:33 --> Unclosed '{' on line 217
+in APPPATH\Views\comentarios.php on line 238.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('comentarios', [], true)
+ 3 APPPATH\Controllers\SocialMedia.php(27): view('comentarios', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-05 23:34:33 --> Unclosed '{' on line 217
+in APPPATH\Views\comentarios.php on line 238.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('comentarios', [], true)
+ 3 APPPATH\Controllers\SocialMedia.php(27): view('comentarios', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-05 23:34:33 --> Unclosed '{' on line 217
+in APPPATH\Views\comentarios.php on line 238.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('comentarios', [], true)
+ 3 APPPATH\Controllers\SocialMedia.php(27): view('comentarios', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-05 23:34:33 --> Unclosed '{' on line 217
+in APPPATH\Views\comentarios.php on line 238.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('comentarios', [], true)
+ 3 APPPATH\Controllers\SocialMedia.php(27): view('comentarios', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-05 23:44:27 --> Cannot access offset of type string on string
+in APPPATH\Models\SocialMediaDB.php on line 91.
+ 1 APPPATH\Controllers\SocialMedia.php(25): App\Models\SocialMediaDB->comentarios('1')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-05 23:44:48 --> Undefined array key "login"
+in APPPATH\Views\comentarios.php on line 218.
+ 1 APPPATH\Views\comentarios.php(218): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "login"', 'C:\\xampp\\htdocs\\atv_Avaliativa_Final\\CodeIgniter\\app\\Views\\comentarios.php', 218)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\atv_Avaliativa_Final\\CodeIgniter\\app\\Views\\comentarios.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('comentarios', [], true)
+ 5 APPPATH\Controllers\SocialMedia.php(28): view('comentarios', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-05 23:44:56 --> Undefined array key "login"
+in APPPATH\Views\comentarios.php on line 218.
+ 1 APPPATH\Views\comentarios.php(218): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "login"', 'C:\\xampp\\htdocs\\atv_Avaliativa_Final\\CodeIgniter\\app\\Views\\comentarios.php', 218)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\atv_Avaliativa_Final\\CodeIgniter\\app\\Views\\comentarios.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('comentarios', [], true)
+ 5 APPPATH\Controllers\SocialMedia.php(28): view('comentarios', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-05 23:46:14 --> Undefined variable $post
+in APPPATH\Views\comentarios.php on line 217.
+ 1 APPPATH\Views\comentarios.php(217): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $post', 'C:\\xampp\\htdocs\\atv_Avaliativa_Final\\CodeIgniter\\app\\Views\\comentarios.php', 217)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\atv_Avaliativa_Final\\CodeIgniter\\app\\Views\\comentarios.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('comentarios', [], true)
+ 5 APPPATH\Controllers\SocialMedia.php(28): view('comentarios', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SocialMedia->comentarios('1')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

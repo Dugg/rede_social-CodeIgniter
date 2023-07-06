@@ -19,6 +19,33 @@ class SocialMedia extends BaseController
         return view('login');
     }
 
+    public function comentarios($params)
+    {
+        $dados = [
+            'id_post' => $params,
+            'post' => $this->social_media_DB->comentarios($params),
+            'respostas' => $this->social_media_DB->get_ComentariosPost($params)
+        ];
+        return view("comentarios", compact('dados'));
+    }
+
+    public function insert_comentarios_do_post()
+    {
+        $dados = [
+            'post_id' => $_POST['id_post'],
+            'id_autor' => $_POST['id_user'],
+            'mensagem' => $_POST['mensagem']
+        ];
+        
+        $resultado = $this->social_media_DB->insert_comentarios_post($dados);
+
+        if ($resultado > 0) {
+            echo 'Dados inseridos com sucesso!';
+        } else {
+            echo 'Erro ao inserir os dados.';
+        }
+    }
+
     public function post()
     {
         $dados = [

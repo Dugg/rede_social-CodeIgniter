@@ -437,10 +437,12 @@
                                     <i class="fas fa-heart"></i>
                                     <span class="likes-count"><?php echo $value['quantidade_likes'] ?></span>
                                 </button>
-                                <button class="btn-retweet">
-                                    <i class="fas fa-comment"></i>
-                                    <span class="comments-count"><?php echo $value['quantidade_comentarios'] ?></span>
-                                </button>
+                                <a href="tweet/<?php echo $value['post_id']; ?>">
+                                    <button class="btn-retweet">
+                                        <i class="fas fa-comment"></i>
+                                        <span class="comments-count"><?php echo $value['quantidade_comentarios'] ?></span>
+                                    </button>
+                                </a>
                                 <button onclick="openPopup(event)" class="btn-options">...</button>
                                 <div class="popup">
                                     <ul>
@@ -540,7 +542,7 @@
                     // Lide com o erro
                 }
             });
-        }else{
+        } else {
             $.ajax({
                 url: 'SocialMedia/deslike',
                 type: 'POST',

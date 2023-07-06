@@ -33,6 +33,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('login', 'SocialMedia::login');
 $routes->get('home','SocialMedia::index');
+$routes->get('tweet/(:any)', 'SocialMedia::comentarios/$1');
 
 /*
  * --------------------------------------------------------------------
