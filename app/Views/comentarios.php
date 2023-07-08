@@ -238,7 +238,7 @@
     <div class="container">
         <div class="left-column">
             <div class="top-section">
-                <a href="#" class="button_home">Home</a>
+                <a href="../home" class="button_home">Home</a>
                 <button class="button" id="open-dialog-btn">Abrir Popup</button>
                 <dialog class="tweet-dialog">
                     <form id="envio_Post">

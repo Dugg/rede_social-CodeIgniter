@@ -117,4 +117,18 @@ class SocialMediaDB extends Model
         $this->db->table('comentarios')->insert($dados);
         return $this->db->affectedRows();
     }
+
+    public function excluiPost($post_id){
+        $this->db->table('post')
+        ->where('id', $post_id)
+        ->delete();
+
+    $rowsDeleted = $this->db->affectedRows();
+
+    if ($rowsDeleted > 0) {
+        // O deslike foi realizado com sucesso
+    } else {
+        // Nenhum registro foi excluído
+    }
+    }
 }

@@ -14,6 +14,11 @@ class SocialMedia extends BaseController
         $this->social_media_DB = new SocialMediaDB();
     }
 
+    public function index(){
+        $dados = $this->social_media_DB->readAllMessages();
+        return view('home',compact('dados'));
+    }
+
     public function login()
     {
         return view('login');
@@ -55,6 +60,18 @@ class SocialMedia extends BaseController
         ];
 
         $resultado = $this->social_media_DB->insert_data($dados);
+
+        if ($resultado > 0) {
+            echo 'Dados inseridos com sucesso!';
+        } else {
+            echo 'Erro ao inserir os dados.';
+        }
+    }
+
+    public function excluiPost(){
+        $post_id = $_POST['post_id'];
+
+        $resultado = $this->social_media_DB->excluiPost($post_id);
 
         if ($resultado > 0) {
             echo 'Dados inseridos com sucesso!';
