@@ -48,9 +48,24 @@ class SocialMediaDB extends Model
         return $query->getResultArray();
     }
 
+    public function getPostIdByAuthorId($authorId)
+    {
+        $query = $this->db->table('post')
+        ->select('id as post_id')
+        ->where('id_autor', $authorId)
+        ->get();
+        $result = $query->getResultArray();
+        return $result;
+    }
+
     public function insert_data($dados)
     {
-        $this->db->table('post')->insert($dados);
+        if (isset($dados['id'])) {
+            $this->db->table('post')->where('id', $dados['id'])->update($dados);
+        } else {
+            $this->db->table('post')->insert($dados);
+        }
+
         return $this->db->affectedRows();
     }
 
@@ -118,17 +133,18 @@ class SocialMediaDB extends Model
         return $this->db->affectedRows();
     }
 
-    public function excluiPost($post_id){
+    public function excluiPost($post_id)
+    {
         $this->db->table('post')
-        ->where('id', $post_id)
-        ->delete();
+            ->where('id', $post_id)
+            ->delete();
 
-    $rowsDeleted = $this->db->affectedRows();
+        $rowsDeleted = $this->db->affectedRows();
 
-    if ($rowsDeleted > 0) {
-        // O deslike foi realizado com sucesso
-    } else {
-        // Nenhum registro foi excluído
-    }
+        if ($rowsDeleted > 0) {
+            // O deslike foi realizado com sucesso
+        } else {
+            // Nenhum registro foi excluído
+        }
     }
 }

@@ -80,6 +80,44 @@ class SocialMedia extends BaseController
         }
     }
 
+    public function editarPost(){
+        $dados = [
+            'id' => $_POST['post_id'],
+            'mensagem' => $_POST['mensagem'],
+            'data_alteracao' => date('Y-m-d H:i:s')
+        ];
+
+        $resultado = $this->social_media_DB->insert_data($dados);
+
+        if ($resultado > 0) {
+            echo 'Dados inseridos com sucesso!';
+        } else {
+            echo 'Erro ao inserir os dados.';
+        }
+    }
+
+    public function getPostIdByAuthorId(){
+        $dados = $_POST['id_autor'];
+
+        $posts = $this->social_media_DB->getPostIdByAuthorId($dados);
+
+        if ($posts) {
+            $response = [
+                'success' => true,
+                'posts' => $posts
+            ];
+
+            return $this->response->setJSON($response);
+        } else {
+            $response = [
+                'success' => false,
+                'message' => 'Nenhum like encontrado.'
+            ];
+
+            return $this->response->setJSON($response)->setStatusCode(404);
+        }
+    }
+
     public function like()
     {
         $dados = [

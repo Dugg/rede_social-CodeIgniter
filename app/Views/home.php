@@ -42,7 +42,7 @@
                             <img src="https://via.placeholder.com/48" alt="User">
                             <span><?php echo $value['login']; ?></span>
                         </div>
-                        <div class="message">
+                        <div id="<?php echo $value['post_id'] ?>" class="message">
                             <div class="user-name"><?php echo $value['login']; ?></div>
                             <p><?php echo $value['mensagem'] ?></p>
                             <div class="actions">
@@ -56,10 +56,10 @@
                                         <span class="comments-count"><?php echo $value['quantidade_comentarios'] ?></span>
                                     </button>
                                 </a>
-                                <button onclick="openPopup(event)" class="btn-options">...</button>
+                                <button data-post-id="<?php echo $value['post_id'] ?>" onclick="openPopup(event)" class="btn-options">...</button>
                                 <div class="popup">
                                     <ul data-post-id="<?php echo $value['post_id'] ?>">
-                                        <li><button onclick="">Editar</button></li>
+                                        <li><button onclick="editarMensagem(event)">Editar</button></li>
                                         <li><button onclick="excluirPost(event)">Excluir</button></li>
                                     </ul>
                                 </div>
@@ -81,6 +81,117 @@
 </body>
 
 <script>
+    window.addEventListener('load', () => {
+        var id_user = localStorage.getItem('id_user');
+        $.ajax({
+            url: 'SocialMedia/get_likes',
+            type: 'POST',
+            data: {
+                'id_user': id_user,
+            },
+            success: function(response) {
+                console.log('Requisição bem-sucedida:', response);
+                var likes = response.likes;
+                likes.forEach(function(like) {
+                    var postID = like.post_id;
+                    var likeID = like.id_like
+                    var likeButton = document.querySelector(`button[data-post-id="${postID}"]`);
+                    if (likeButton) {
+                        likeButton.classList.add('liked');
+                        likeButton.setAttribute('data-liked', 'true');
+                        likeButton.setAttribute('data-id-like', likeID);
+                    }
+                });
+            },
+            error: function(xhr, status, error) {
+                console.log('Erro na requisição:', error);
+                // Lide com o erro
+            }
+        });
+
+        $.ajax({
+            url: 'SocialMedia/getPostIdByAuthorId',
+            type: 'POST',
+            data: {
+                'id_autor': id_user,
+            },
+            success: function(response) {
+                console.log('Requisição bem-sucedida:', response);
+                var postsID = response.posts;
+                var btnOptionsList = document.querySelectorAll('button.btn-options[data-post-id]');
+
+                btnOptionsList.forEach(function(btnOptions) {
+                    var postId = btnOptions.getAttribute('data-post-id');
+
+                    postsID.forEach(function(post) {
+                        if (post.post_id == postId) {
+                            btnOptions.style.display = 'block';
+                        }
+                    });
+
+                    console.log(postId);
+                });
+            },
+            error: function(xhr, status, error) {
+                console.log('Erro na requisição:', error);
+                // Lide com o erro
+            }
+        });
+
+    });
+
+    function editarMensagem(event) {
+        var ulElement = event.target.parentNode.parentNode;
+        var post_id = ulElement.getAttribute('data-post-id');
+
+        var post = document.getElementById(post_id)
+        var mensagem = post.querySelector('p')
+        var mensagemAtual = mensagem.textContent;
+
+        var inputElement = document.createElement('input');
+        inputElement.type = 'text';
+        inputElement.value = mensagemAtual;
+        inputElement.classList.add('edit-input');
+
+        mensagem.parentNode.replaceChild(inputElement, mensagem);
+
+        inputElement.focus();
+        inputElement.addEventListener('blur', function() {
+            var mensagemNova = inputElement.value.trim();
+
+            if (mensagemNova !== '') {
+                mensagem.textContent = mensagemNova
+                $.ajax({
+                    url: 'SocialMedia/editarPost',
+                    type: 'POST',
+                    data: {
+                        'post_id': post_id,
+                        'mensagem': mensagemNova
+                    },
+                    success: function(response) {
+                        console.log('Requisição bem-sucedida:', response);
+                        location.reload();
+                        // Faça algo com a resposta recebida
+                    },
+                    error: function(xhr, status, error) {
+                        console.log('Erro na requisição:', error);
+                        // Lide com o erro
+                    }
+                });
+            } else {
+                mensagem.textContent = mensagemAtual
+            }
+
+            inputElement.parentNode.replaceChild(mensagem, inputElement);
+        });
+
+
+        console.log(mensagemAtual);
+    }
+
+
+
+
     // Exibe o valor no console
     console.log(id_user);
 
@@ -90,27 +201,27 @@
         popup.classList.toggle('show');
     }
 
-    function excluirPost(event){
+    function excluirPost(event) {
         var ulElement = event.target.parentNode.parentNode;
         var postId = ulElement.getAttribute('data-post-id');
         console.log(postId);
 
         $.ajax({
-                url: 'SocialMedia/excluiPost',
-                type: 'POST',
-                data: {
-                    'post_id': postId
-                },
-                success: function(response) {
-                    console.log('Requisição bem-sucedida:', response);
-                    location.reload();
-                    // Faça algo com a resposta recebida
-                },
-                error: function(xhr, status, error) {
-                    console.log('Erro na requisição:', error);
-                    // Lide com o erro
-                }
-            });
+            url: 'SocialMedia/excluiPost',
+            type: 'POST',
+            data: {
+                'post_id': postId
+            },
+            success: function(response) {
+                console.log('Requisição bem-sucedida:', response);
+                location.reload();
+                // Faça algo com a resposta recebida
+            },
+            error: function(xhr, status, error) {
+                console.log('Erro na requisição:', error);
+                // Lide com o erro
+            }
+        });
     }
 
     const dialog = document.querySelector('.tweet-dialog');
@@ -120,7 +231,7 @@
         dialog.showModal();
     });
 
-    function closeDialog(){
+    function closeDialog() {
         dialog.close();
     };
 
@@ -196,35 +307,6 @@
             });
         }
     }
-
-    window.addEventListener('load', () => {
-        var id_user = localStorage.getItem('id_user');
-        $.ajax({
-            url: 'SocialMedia/get_likes',
-            type: 'POST',
-            data: {
-                'id_user': id_user,
-            },
-            success: function(response) {
-                console.log('Requisição bem-sucedida:', response);
-                var likes = response.likes;
-                likes.forEach(function(like) {
-                    var postID = like.post_id;
-                    var likeID = like.id_like
-                    var likeButton = document.querySelector(`button[data-post-id="${postID}"]`);
-                    if (likeButton) {
-                        likeButton.classList.add('liked');
-                        likeButton.setAttribute('data-liked', 'true');
-                        likeButton.setAttribute('data-id-like', likeID);
-                    }
-                });
-            },
-            error: function(xhr, status, error) {
-                console.log('Erro na requisição:', error);
-                // Lide com o erro
-            }
-        });
-    });
 </script>
 
 
