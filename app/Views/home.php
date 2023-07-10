@@ -28,7 +28,7 @@
                 </dialog>
             </div>
             <div class="bottom-section">
-                <a href="#" class="button">Usuário</a>
+                <a href="#" class="button" > <script> document.write("Usuário") </script>  </a>
                 <a href="login" class="button_logout">Logout</a>
             </div>
         </div>
@@ -139,6 +139,29 @@
             error: function(xhr, status, error) {
                 console.log('Erro na requisição:', error);
                 // Lide com o erro
+            }
+        });
+
+        $.ajax({
+            url: 'SocialMedia/consultaUsuario',
+            type: 'GET',
+            data: {
+                'id_user': id_user,
+            },
+            success: function(response) {
+                console.log('Requisição bem-sucedida:', response);
+                var user = response.usuario;
+                // var anchor = document.getElementById("nomeUser");
+                // if (user){
+                //     var novoTexto = document.createTextNode(user['login']);
+                // } else {
+                //     var novoTexto = document.createTextNode("Usuário");
+                // }
+                // // anchor.appendChild(novoTexto);
+            },
+            error: function(xhr, status, error) {
+                console.log('Erro na requisição:', error);
+                console.log('ta dando errado')
             }
         });
 

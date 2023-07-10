@@ -194,4 +194,27 @@ class SocialMedia extends BaseController
             return 0;
         }
     }
+    public function consultaUsuario()
+    {
+        $dados = [
+            'id' => $_GET['id_user'],
+        ];
+
+        $resultado = $this->social_media_DB->getUser($dados);
+
+        if($resultado){
+            $response = [
+                'success' => true,
+                'usuario' => $resultado
+            ];
+            return $this->response->setJSON($response);
+        } else {
+            $response = [
+                'success' => false,
+                'message' => 'Nenhum usuario encontrado.'
+            ];
+
+            return $this->response->setJSON($response)->setStatusCode(404);
+        }
+    }
 }

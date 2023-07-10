@@ -156,4 +156,14 @@ class SocialMediaDB extends Model
 
         return $this->db->affectedRows();
     }
+
+    public function getUser($dados)
+    {
+        $query =  $this->db->table('usuarios')->where('id', $dados['id'])->get();
+        
+        $result = $query->getResultArray();
+       
+
+        return $result;
+    }
 }
