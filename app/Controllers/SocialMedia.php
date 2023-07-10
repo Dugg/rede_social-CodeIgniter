@@ -23,6 +23,10 @@ class SocialMedia extends BaseController
     {
         return view('login');
     }
+    public function cadastro()
+    {
+        return view('cadastro');
+    }
 
     public function comentarios($params)
     {
@@ -170,6 +174,24 @@ class SocialMedia extends BaseController
             ];
 
             return $this->response->setJSON($response)->setStatusCode(404);
+        }
+    }
+
+    public function cadastraUsuario()
+    {
+        $dados = [
+            'login' => $_POST['login'],
+            'senha' => $_POST['senha'],
+            'email' => $_POST['email'],
+            'imgPath' => null
+        ];
+
+        $resultado = $this->social_media_DB->insert_user($dados);
+
+        if ($resultado > 0) {
+            return 1;
+        } else {
+            return 0;
         }
     }
 }

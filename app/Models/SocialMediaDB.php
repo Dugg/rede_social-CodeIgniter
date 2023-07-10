@@ -147,4 +147,13 @@ class SocialMediaDB extends Model
             // Nenhum registro foi excluído
         }
     }
+
+    public function insert_user($dados)
+    {
+        if (isset($dados['login'])) {
+            $this->db->table('usuarios')->insert($dados);
+        }
+
+        return $this->db->affectedRows();
+    }
 }

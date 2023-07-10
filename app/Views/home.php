@@ -29,6 +29,7 @@
             </div>
             <div class="bottom-section">
                 <a href="#" class="button">Usuário</a>
+                <a href="login" class="button_logout">Logout</a>
             </div>
         </div>
 
@@ -73,7 +74,10 @@
         <div class="right-column">
             <div class="news">
                 <h2>Notícias</h2>
-                <p>PICAS VOADORAS CAEM DO CÉU</p>
+                <ol>
+                    <li>O LANÇAMENTO DO THREADS É UM SUCESSO GLOBAL</li>
+                    <li>BARBIE GANHA OSCAR DE MELHOR FILME NA CATEGORIA "FILMES DA BARBIE"</li>
+                </ol>    
             </div>
         </div>
     </div>

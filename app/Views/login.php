@@ -78,6 +78,11 @@
   cursor: pointer;
   margin-bottom: 5px;
 }
+
+.cadastrar_button:hover {
+  background-color: #0c87b8;
+}
+
     </style>
 </head>
 <body class="utiliti">
@@ -87,11 +92,11 @@
                 <h1>LOG IN</h1>
             </div>
             <form class="login_form" action="ValidaLogin" method="post">
-                <input class="login_input" type="text" placeholder="Username" name="login" >
+                <input class="login_input" type="text" placeholder="Username" name="login" required>
                 <input class="login_input" type="password" placeholder="Password" name="senha" required>
                 <button class="login_button" type="submit">Login</button>
             </form>
-            <form class="login_form" action="ValidaLogin" method="get">
+            <form class="login_form" action="cadastro" method="get">
                 <button class="cadastrar_button" type="submit">Cadastrar</button>
             </form>
         </div>

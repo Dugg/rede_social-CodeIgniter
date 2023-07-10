@@ -18,7 +18,7 @@ body {
 
 .left-column {
   flex-shrink: 0;
-  width: 24em;
+  width: 22em;
   padding-right: 20px;
   display: flex;
   flex-direction: column;
@@ -35,7 +35,7 @@ body {
 
 .right-column {
   flex-shrink: 0;
-  width: 32em;
+  width: 28em;
   padding-left: 20px;
 }
 
@@ -79,6 +79,20 @@ body {
   cursor: pointer;
   text-decoration: none;
   margin-bottom: 10px;
+}
+
+.button_logout {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #e20b0b;
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .sair-btn {
@@ -337,6 +351,8 @@ body {
 .bottom-section {
   text-align: center;
   padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .tweet-dialog {

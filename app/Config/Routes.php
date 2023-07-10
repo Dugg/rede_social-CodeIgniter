@@ -32,6 +32,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('login', 'SocialMedia::login');
+$routes->get('cadastro', 'SocialMedia::cadastro');
 $routes->get('home','SocialMedia::index');
 $routes->get('tweet/(:any)', 'SocialMedia::comentarios/$1');
 

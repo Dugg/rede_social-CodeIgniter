@@ -23,3 +23,20 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
  8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SocialMedia))
  9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-09 21:37:07 --> Undefined array key "login"
+in APPPATH\Controllers\ValidaLogin.php on line 20.
+ 1 APPPATH\Controllers\ValidaLogin.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "login"', 'C:\\xampp\\htdocs\\twitter\\rede_social-CodeIgniter\\app\\Controllers\\ValidaLogin.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ValidaLogin->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidaLogin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-09 21:50:51 --> Maximum execution time of 120 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 170.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-07-09 22:48:15 --> Undefined array key "login"
+in APPPATH\Controllers\ValidaLogin.php on line 20.
+ 1 APPPATH\Controllers\ValidaLogin.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "login"', 'C:\\xampp\\htdocs\\twitter\\rede_social-CodeIgniter\\app\\Controllers\\ValidaLogin.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ValidaLogin->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ValidaLogin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
