@@ -6,7 +6,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #000;
+            background-color: #15202b;
             color: #fff;
             margin: 0;
         }
@@ -17,10 +17,12 @@
             /* Definindo a coluna do meio como duas vezes mais larga */
             height: 100vh;
             /* Ocupa a altura total da tela */
+            border-radius: 8px;
+            background-color: #192734;
         }
 
         .left-column {
-            background-color: #11161a;
+            background-color: #15202b;
             /* Cor de fundo da coluna esquerda */
             display: flex;
             flex-direction: column;
@@ -57,7 +59,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: #14171a;
+            background-color: #15202b;
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -118,6 +120,7 @@
         .tweet-container {
             background-color: #14171a;
             padding: 10px;
+            border-radius: 10px;
         }
 
         .tweet {
@@ -152,11 +155,12 @@
         .reply-input {
             width: 100%;
             min-height: 80px;
-            background-color: #14171a;
+            background-color: #15202b;
             border: none;
             color: #fff;
             resize: vertical;
             margin-top: 10px;
+            border-radius: 20px;
             /* Adicionado estilo de margem superior */
         }
 
@@ -171,7 +175,7 @@
         }
 
         .right-column {
-            background-color: #11161a;
+            background-color: #15202b;
             /* Cor de fundo da coluna direita */
         }
 
@@ -192,6 +196,7 @@
             background-color: #14171a;
             padding: 10px;
             margin-top: 20px;
+            border-radius: 18px;
         }
 
         .respostas-container h3 {
@@ -287,7 +292,10 @@
         <div class="right-column">
             <div class="news-container">
                 <h2 class="news-title">Últimas Notícias</h2>
-                <p class="news-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel tortor ut ligula iaculis tincidunt. Mauris sit amet posuere nulla. Nulla id volutpat nisl. Donec id ante id massa placerat cursus vel in ligula. Vivamus pharetra lorem dui, at blandit lectus feugiat ut. Fusce commodo quam eget ante efficitur varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+                <ol>
+                    <li>DEADPOOL3: IMAGEM OFICIAL MOSTRA WOLWERINE AO LADO DE DEADPOOL</li>
+                    <li>O TIO ELON MOSKA TA COM MEDO</li>
+                </ol>  
             </div>
         </div>
     </div>
