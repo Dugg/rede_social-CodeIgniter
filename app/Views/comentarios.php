@@ -23,10 +23,13 @@
 
         .left-column {
             background-color: #15202b;
-            /* Cor de fundo da coluna esquerda */
+            flex-shrink: 0;
+            width: 22em;
+            padding-right: 20px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            align-items: center;
         }
 
         .top-section {
@@ -41,8 +44,15 @@
             text-decoration: none;
             padding: 10px;
             background-color: #1da1f2;
-            border-radius: 5px;
+            border-radius: 9999px;
             margin-right: 10px;
+            display: inline-block;
+            padding: 8px 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            margin-bottom: 10px;
+
         }
 
         #open-dialog-btn {
@@ -244,15 +254,6 @@
         <div class="left-column">
             <div class="top-section">
                 <a href="../home" class="button_home">Home</a>
-                <button class="button" id="open-dialog-btn">Abrir Popup</button>
-                <dialog class="tweet-dialog">
-                    <form id="envio_Post">
-                        <label for="tweet-input">Digite o seu tweet:</label>
-                        <textarea id="tweet-input" rows="4" placeholder="Digite o seu tweet..." required></textarea>
-                        <button class="cancel">Cancelar</button>
-                        <button class="confirm">Confirmar</button>
-                    </form>
-                </dialog>
             </div>
             <div class="bottom-section">
                 <a href="#" class="button">Usuário</a>

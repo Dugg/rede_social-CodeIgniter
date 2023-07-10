@@ -357,6 +357,10 @@ body {
 
 .tweet-dialog {
   font-family: Arial, sans-serif;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #192734;
 }
 
 .tweet-dialog form {
@@ -368,6 +372,7 @@ body {
 .tweet-dialog label {
   font-weight: bold;
   margin-bottom: 5px;
+  color: #fff;
 }
 
 .tweet-dialog textarea {
@@ -377,6 +382,8 @@ body {
   border-radius: 4px;
   resize: none;
   margin-bottom: 10px;
+  display: inline-block;
+  margin-right: auto;
 }
 
 .tweet-dialog button {
@@ -385,14 +392,15 @@ body {
   border-radius: 4px;
   color: #fff;
   cursor: pointer;
+  margin-bottom:5px ;
 }
 
 .tweet-dialog .cancel {
-  background-color: #1da1f2;
+  background-color: #f21d1d;
 }
 
 .tweet-dialog .confirm {
-  background-color: #dc3545;
+  background-color: #1da1f2;
 }
 
 .liked .fa-heart {

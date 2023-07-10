@@ -20,8 +20,8 @@
                 <button class="button" id="open-dialog-btn">Abrir Popup</button>
                 <dialog class="tweet-dialog">
                     <form id="envio_Post">
-                        <label for="tweet-input">Digite o seu tweet:</label>
-                        <textarea id="tweet-input" rows="4" placeholder="Digite o seu tweet..." required></textarea>
+                        <label for="tweet-input">No que você está pensando?</label>
+                        <textarea id="tweet-input" rows="4" placeholder="Conte-nos..." required></textarea>
                         <button onclick="closeDialog()" class="cancel">Cancelar</button>
                         <button class="confirm">Confirmar</button>
                     </form>
@@ -230,6 +230,7 @@
 
     const dialog = document.querySelector('.tweet-dialog');
     const openDialogBtn = document.getElementById('open-dialog-btn');
+    const father = document.getElementById('top-section');
 
     openDialogBtn.addEventListener('click', () => {
         dialog.showModal();
